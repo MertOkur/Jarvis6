@@ -94,7 +94,7 @@ class StartRoutine {
                 handleUI();
 
                 SaveConversation.saveConversation(context, conversation, true);
-                SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
+                // SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
             }
 
             @Override
@@ -120,7 +120,7 @@ class StartRoutine {
                 handleUI();
 
                 SaveConversation.saveConversation(context, conversation, true);
-                SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
+                // SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
             }
         });
     }

@@ -609,7 +609,7 @@ class GPT extends AsyncTask<Message, String, JsonObject> {
         ));
 
         SaveConversation.saveConversation(context, conversation, false);
-        SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
+        // SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
     }
 
     // TODO this is using GPS -> mistake when storing to conversation

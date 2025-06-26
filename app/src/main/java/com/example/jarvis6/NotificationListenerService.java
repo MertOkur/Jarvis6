@@ -43,7 +43,7 @@ public class NotificationListenerService extends android.service.notification.No
         var activeNotifications = getActiveNotifications();
         var notificationList = new ArrayList<Notification>();
         for (var sbn : activeNotifications) {
-            var pkgName = sbn.getPackageName();
+            var pkgName = sbn.getPackageName(); 
             var extras = sbn.getNotification().extras;
             var titleChar = (extras.getCharSequence("android.title"));
             var textChar = extras.getCharSequence("android.text");

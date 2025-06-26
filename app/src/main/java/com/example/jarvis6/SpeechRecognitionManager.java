@@ -104,8 +104,8 @@ class SpeechRecognitionManager {
 
                     if (recognizedText.toLowerCase().contains("auf wiedersehen") || recognizedText.toLowerCase().contains("tschüss") || recognizedText.toLowerCase().contains("kapat") || recognizedText.toLowerCase().contains("görüşürüz") || recognizedText.toLowerCase().contains("hoşça kal")) {
                         stop();
-                        SaveConversation.saveConversation(context, new Conversation(new ArrayList<>()), false);   // use to delete memory after closing app to aviod too huge requests!
                         SaveConversation.appendToLongTermMemory(context, "conversation.jsonl","conversation_long_term_memory.jsonl");
+                        SaveConversation.saveConversation(context, new Conversation(new ArrayList<>()), false);   // use to delete memory after closing app to aviod too huge requests!
 
                         System.exit(0);
                     }

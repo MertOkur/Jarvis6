@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Falls du ein Layout hast
+        setContentView(R.layout.activity_main);
 
         scrollView = findViewById(R.id.scrollView4);
         linearLayout = scrollView.findViewById(R.id.linearLayoutId);
@@ -251,8 +251,8 @@ public class MainActivity extends AppCompatActivity implements TextToSpeech.OnIn
             audioManager.setBluetoothScoOn(false);
         }
 
-        SaveConversation.saveConversation(this, new Conversation(new ArrayList<>()), false);   // use to delete memory after closing app to avoid too huge requests!
         SaveConversation.appendToLongTermMemory(this, "conversation.jsonl","conversation_long_term_memory.jsonl");
+        SaveConversation.saveConversation(this, new Conversation(new ArrayList<>()), false);   // use to delete memory after closing app to avoid too huge requests!
 
         bluetoothHelper1.stopBluetoothScoConnection();
         unregisterReceiver(scoReceiver);
