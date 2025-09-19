@@ -56,7 +56,7 @@ import okhttp3.RequestBody;
 class GPT extends AsyncTask<Message, String, JsonObject> {
     private final OkHttpClient client = new OkHttpClient().newBuilder().readTimeout(60, TimeUnit.SECONDS).build();
     private final String url = "https://api.openai.com/v1/chat/completions";
-    private final String apiKey = "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";
+    private final String apiKey = ""; // TODO insert GPT-API key here
     private final String model = "gpt-4o-mini-2024-07-18";
     private final String modelBehaviour = """
             Du bist Jarvis: Just another rather very intelligent system von deinem Boss. Dein Boss heißt Mert, niemand sonst.
